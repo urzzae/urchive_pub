@@ -6,6 +6,11 @@
   min-height: 15rem;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .contact {
+    height: 360px;
+  }
+}
 .contact .inner {
   display: flex;
   flex-direction: column;
