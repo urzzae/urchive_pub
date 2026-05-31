@@ -1,0 +1,112 @@
+section {
+  position: relative;
+  padding: 10rem 0;
+  background-color: var(--bg);
+}
+section .txt {
+  position: absolute;
+  top: 50px;
+  right: -35px;
+  font-size: clamp(6.25rem, 13.3333vw, 12rem);
+  font-family: var(--heading);
+  font-weight: var(--font-weight-boldEx);
+  font-style: italic;
+  color: var(--text-g);
+  z-index: 9;
+  line-height: 1;
+  opacity: 0.45;
+  will-change: transform;
+}
+section .inner {
+  position: relative;
+  z-index: 999;
+}
+section .inner .line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--border);
+}
+section .inner .line.line1 {
+  top: 45%;
+}
+section .inner .line.line2 {
+  top: 58%;
+}
+section .inner .line.line3 {
+  top: 85%;
+}
+section .inner .line.line4 {
+  top: 105%;
+}
+section .project_list {
+  position: relative;
+  display: flex;
+  z-index: 9;
+}
+section .project_item {
+  border: 1px solid var(--border);
+  height: 500px;
+  transition: margin-top 0.25s ease-in-out;
+  cursor: pointer;
+}
+section .project_item:hover {
+  margin-top: -15px;
+}
+section .project_item:not(:first-child) {
+  margin-left: -1px;
+}
+section .project_item:nth-child(1) .title .inner {
+  top: 110px;
+}
+section .project_item:nth-child(2) .title .inner {
+  top: 107px;
+}
+section .project_item:nth-child(3) .title .inner {
+  top: 110px;
+}
+section .project_item:nth-child(4) .title .inner {
+  top: 100px;
+}
+section .project_item a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  height: 100%;
+}
+section .project_item a .num {
+  width: 50%;
+  text-align: center;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-boldEx);
+  padding-top: 3px;
+  border-bottom: 1px solid var(--border);
+}
+section .project_item a .period {
+  font-size: calc(var(--font-size-s) - 1px);
+  font-weight: var(--font-weight-boldEx);
+  text-align: center;
+  white-space: break-spaces;
+  line-height: 1.2;
+  padding-bottom: 15px;
+  white-space: pre-line;
+}
+section .project_item a .title {
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
+section .project_item a .title .inner {
+  transform: translateX(-50%) rotate(90deg);
+  transform-origin: center;
+  position: absolute;
+  left: 50%;
+}
+section .project_item a .title p {
+  line-height: 1;
+  font-size: calc(var(--font-size-s) + 1.5px);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+}/*# sourceMappingURL=Projects.module.css.map */

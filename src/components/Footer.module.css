@@ -1,0 +1,24 @@
+.footer {
+  width: calc(100% - 100px);
+  position: fixed;
+  z-index: 9999;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 2px solid var(--border);
+  padding: 10px 15px 5px 15px;
+}
+@media (max-width: 768px) {
+  .footer {
+    bottom: 25px;
+    width: 90%;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+}
+.footer .copy {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  opacity: 0.45;
+}/*# sourceMappingURL=Footer.module.css.map */
