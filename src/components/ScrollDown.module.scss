@@ -8,7 +8,7 @@
   bottom: 12dvh;
   width: var(--sizeX);
   height: var(--sizeY);
-  margin-left: var(sizeX / 2);
+  margin-left: var(--sizeX);
   border: 1px solid var(--text-h);
   border-radius: 50px;
   box-sizing: border-box;
