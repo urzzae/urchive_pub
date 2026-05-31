@@ -1,7 +1,5 @@
-import styles from "./Button.module.scss";
-
-function Button() {
+function Lightbox() {
   return <></>;
 }
 
-export default Button;
+export default Lightbox;
