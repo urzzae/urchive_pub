@@ -115,10 +115,6 @@ function Project03() {
         />
         <figcaption>
           <p className={styles.center}>폰트 상세이미지 작업</p>
-          <p>
-            각 폰트의 특성을 효과적으로 전달하기 위한 비주얼 목업을
-            작업했습니다.
-          </p>
         </figcaption>
       </motion.figure>
     </div>
