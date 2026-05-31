@@ -2,14 +2,12 @@
 
 .container {
   width: calc(100% - 100px);
-  padding: 12dvh 15px 10dvh 15px;
+  padding: 120px 15px;
   margin-left: auto;
   margin-right: auto;
   @media (max-width: 768px) {
     width: 90%;
-    padding-top: 95px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 95px 0;
   }
   .info {
     display: flex;
