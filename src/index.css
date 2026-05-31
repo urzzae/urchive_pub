@@ -1,0 +1,162 @@
+:root {
+  --text: #1f1f1f;
+  --text-h: #5a5a5a;
+  --text-g: #9b9b9b;
+  --bg: #efefef;
+  --border: #1f1f1f;
+  --border-g: #e3e3e3;
+
+  --font-weight-def: 360;
+  --font-weight-bold: 600;
+  --font-weight-boldEx: 800;
+
+  --font-size-s: clamp(0.625rem, 0.8333vw, 0.75rem);
+  --font-size-d: clamp(0.875rem, 1.1111vw, 1rem);
+  --font-size-m: clamp(1rem, 1.3889vw, 1.25rem);
+  --font-size-l: clamp(1.25rem, 2.0833vw, 1.875rem);
+
+  --padding-def-v: 20px;
+  --padding-def-h: 15px;
+
+  --margin-def-v: 20px;
+  --margin-def-h: 15px;
+
+  --container-size: 1200px;
+
+  --sans: "Pretendard Variable", Roboto, sans-serif;
+  --heading: "Playfair Display", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: var(--font-weight) 1rem var(--sans);
+  letter-spacing: 0.18px;
+  line-height: 180%;
+  color-scheme: light dark;
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+/* ------------------------------------------------- */
+/* reset */
+/* ------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+button,
+dd,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+select,
+table,
+td,
+textarea,
+th,
+ul {
+  margin: 0;
+  padding: 0;
+}
+button,
+textarea,
+input {
+  outline: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button {
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#tistorytoolbarid {
+  display: none;
+}
+iframe,
+video,
+embed,
+object,
+img,
+table {
+  max-width: 100%;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+a {
+  color: var(--color-def);
+}
+a:hover {
+  color: var(--color-point);
+}
+a,
+img,
+button,
+textarea {
+  transition: var(--transition);
+}
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+ul,
+li {
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+/* ------------------------------------------------- */
+
+.container {
+  width: var(--container-size);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center-h {
+  display: flex;
+  justify-content: center;
+}
+.flex-center-v {
+  display: flex;
+  align-items: center;
+}
