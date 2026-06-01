@@ -4,9 +4,10 @@ section {
   position: relative;
   padding: 10rem 0;
   background-color: var(--bg);
+  overflow-x: hidden;
   .txt {
     position: absolute;
-    top: 50px;
+    top: 150px;
     right: -35px;
     font-size: clamp(6.25rem, 13.3333vw, 12rem);
     font-family: var(--heading);
