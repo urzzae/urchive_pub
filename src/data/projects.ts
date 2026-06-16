@@ -1,42 +1,46 @@
 export type Project = {
   id: string;
-  num: string;
+  skill: string;
   title: string;
-  period: string;
-  color: string;
-  width: string;
+  date: string;
+  summary: string;
+  thumb: string;
 };
 export const projects: Project[] = [
   {
-    id: "project-01",
-    num: "P01",
-    title: "[개인작업] 국립중앙도서관 리디자인",
-    period: "2021.12",
-    color: "#5385c0",
-    width: "55px",
-  },
-  {
-    id: "project-02",
-    num: "P02",
-    title: "[개인작업] 책발전소 가상 웹사이트",
-    period: "2021.12",
-    color: "#e9e9e9",
-    width: "65px",
-  },
-  {
     id: "project-03",
-    num: "P03",
+    skill: "UI/UX · Markup · jQuery",
     title: "디자인210 쇼핑몰 개편 & 유지보수",
-    period: `2022.03\n~\n2025.11`,
-    color: "#d82744",
-    width: "100px",
+    date: `22.03 ~ 25.11`,
+    thumb: "thumb_3",
+    summary:
+      "기존 서비스의 안정적인 운영을 위한\n유지보수 및 개선 작업을 진행했습니다.",
   },
   {
     id: "project-04",
-    num: "P04",
+    skill: "Design · Markup · jQuery · SCSS · GSAP",
     title: "디자인210 공식 웹사이트 구축",
-    period: "2023\n~\n2024",
-    color: "#ff6600",
-    width: "75px",
+    date: "23 ~ 24",
+    thumb: "thumb_4",
+    summary:
+      "브랜드 아이덴티티를 반영한 공식 웹사이트의\n디자인 및 구현을 함께 진행했습니다.",
+  },
+  {
+    id: "project-02",
+    skill: "Design · Markup · jQuery",
+    title: "[개인작업] 책발전소 가상 웹사이트",
+    date: "21.12",
+    thumb: "thumb_2",
+    summary:
+      "책발전소의 라이프스타일 브랜드 '브론테' 쇼핑몰을 개인 포트폴리오용으로\n감성적으로 리디자인한 사이드 프로젝트입니다.",
+  },
+  {
+    id: "project-01",
+    skill: "Design · Markup · jQuery",
+    title: "[개인작업] 국립중앙도서관 리디자인",
+    date: "21.12",
+    thumb: "thumb_1",
+    summary:
+      "국립중앙도서관 웹사이트를 개인 포트폴리오용으로\n리디자인한 사이드 프로젝트입니다.",
   },
 ];

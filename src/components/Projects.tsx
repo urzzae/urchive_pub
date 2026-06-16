@@ -9,45 +9,16 @@ function Projects() {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const u = useTransform(scrollYProgress, [0, 1], [0, -450]);
-  const d = useTransform(scrollYProgress, [0, 1], [0, -200]);
+  const y = useTransform(scrollYProgress, [0, 0.75], ["0px", "100dvh"]);
 
   return (
     <section ref={ref}>
-      <motion.div style={{ y: u }} className={styles.txt}>
+      <motion.div style={{ y: y }} className={styles.txt}>
         Portfolio
       </motion.div>
-      <motion.div style={{ y: d }} className={`${styles.inner} flex-center`}>
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ transformOrigin: "left" }}
-          className={`${styles.line} ${styles.line1}`}
-        ></motion.div>
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ transformOrigin: "left" }}
-          className={`${styles.line} ${styles.line2}`}
-        ></motion.div>
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ transformOrigin: "left" }}
-          className={`${styles.line} ${styles.line3}`}
-        ></motion.div>
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ transformOrigin: "left" }}
-          className={`${styles.line} ${styles.line4}`}
-        ></motion.div>
+      <div className={`${styles.inner} flex-center`}>
         <ProjectList />
-      </motion.div>
+      </div>
     </section>
   );
 }

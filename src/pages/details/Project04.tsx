@@ -50,11 +50,16 @@ function Project04() {
           transition={{ duration: 0.45 }}
         >
           <img
-            src="/images/pj04_img_4.png"
-            alt="[개인작업] 책발전소 가상 웹사이트 서브페이지1 스크린샷"
+            src="/images/pj04_img_6.png"
+            alt="디자인210 공식 웹사이트 scss 구조"
           />
           <figcaption>
-            <p className={styles.center}>문의 페이지</p>
+            <p className={styles.center}>SCSS 모듈화 아키텍처 설계</p>
+            <p>
+              스타일 코드의 유지보수와 재사용성을 높이기 위해 SCSS를 역할에 따라
+              분리하였으며, 변수·믹스인 중앙 관리로 일관된 디자인 시스템을
+              구현하였습니다.
+            </p>
           </figcaption>
         </motion.figure>
         <motion.figure
@@ -63,11 +68,15 @@ function Project04() {
           transition={{ duration: 0.45 }}
         >
           <img
-            src="/images/pj04_img_5.png"
-            alt="[개인작업] 책발전소 가상 웹사이트 서브페이지2 스크린샷"
+            src="/images/pj04_img_7.png"
+            alt="디자인210 공식 웹사이트 scss 구조"
           />
           <figcaption>
-            <p className={styles.center}>전용서체 리스트 페이지</p>
+            <p className={styles.center}>SCSS 변수·mixin 사용 예시</p>
+            <p>
+              변수를 활용한 타이포그래피 및 컬러 시스템을 설계하고, 반복되는 CSS
+              패턴을 Mixin으로 추상화하여 코드 중복을 최소화하였습니다.
+            </p>
           </figcaption>
         </motion.figure>
       </div>

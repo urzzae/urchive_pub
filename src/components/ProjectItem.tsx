@@ -7,34 +7,32 @@ type ProjectItemProps = Project;
 
 function ProjectItem({
   id,
-  num,
+  skill,
   title,
-  period,
-  color,
-  width,
+  date,
+  summary,
+  thumb,
 }: ProjectItemProps) {
-  const delay = parseInt(id.split("-")[1]) * 0.1;
-
   return (
     <motion.li
       className={styles.project_item}
-      style={{ backgroundColor: color, width: width }}
       initial={{ opacity: 0, y: -15 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.35,
-        delay: delay,
       }}
-      viewport={{ amount: 0.15 }}
+      viewport={{ amount: 0.45 }}
     >
       <Link to={`/project/${id}`}>
-        <strong className={styles.num}>{num}</strong>
-        <div className={styles.title}>
-          <div className={styles.inner}>
-            <p>{title}</p>
-          </div>
+        <figure className={styles.thumb}>
+          <img src={`/images/${thumb}.png`} />
+        </figure>
+        <div className={styles.info}>
+          <span className={styles.date}>{date}</span>
+          <strong className={styles.title}>{title}</strong>
+          <p className={styles.summary}>{summary}</p>
+          <span className={styles.skill}>{skill}</span>
         </div>
-        <span className={styles.period}>{period}</span>
       </Link>
     </motion.li>
   );

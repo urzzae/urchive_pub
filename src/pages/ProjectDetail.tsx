@@ -54,6 +54,7 @@ function ProjectDetail() {
               <li key={index}>{tag}</li>
             ))}
           </ul>
+          <p className={styles.role}>{project.contribution}</p>
           <p className={styles.desc}>{project.description}</p>
           {project.buttons && (
             <div className={styles.buttons}>

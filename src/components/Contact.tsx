@@ -2,11 +2,12 @@ import styles from "./Contact.module.scss";
 import { motion } from "framer-motion";
 
 function Contact() {
-  const contactLetters = ["T", "h", "n", "k", " ", "Y", "o", "u", "!"];
+  const contactLetters = ["T", "h", "a", "n", "k", " ", "Y", "o", "u", "!"];
 
   return (
     <div className={`${styles.contact} flex-center`}>
       <div className={`${styles.inner} flex-center-v`}>
+        <motion.div className={styles.txt}>UR</motion.div>
         <div className={styles.title}>
           <div className={styles.animation}>
             {contactLetters.map((letter, index) => (

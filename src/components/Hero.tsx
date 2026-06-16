@@ -10,14 +10,15 @@ function Hero() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll();
 
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.5], ["0px", "-50dvh"]);
 
   return (
     <>
       <motion.div
         className={`${styles.hero} flex-center`}
         ref={ref}
-        style={{ opacity }}
+        style={{ opacity, y }}
       >
         <div className={styles.ur}>
           <span>Portfolio URachive</span>
@@ -73,7 +74,7 @@ function Hero() {
             >
               <span>UI Design</span>
               <span>UI Development</span>
-              <span>Web & Mobile Publishing</span>
+              <span>Web & Mobile Markup</span>
             </motion.div>
           </div>
           <motion.p

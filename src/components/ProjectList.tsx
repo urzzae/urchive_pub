@@ -9,11 +9,11 @@ function ProjectList() {
         <ProjectItem
           key={project.id}
           id={project.id}
-          num={project.num}
+          skill={project.skill}
           title={project.title}
-          period={project.period}
-          color={project.color}
-          width={project.width}
+          date={project.date}
+          summary={project.summary}
+          thumb={project.thumb}
         />
       ))}
     </ul>

@@ -44,6 +44,10 @@
         }
       }
     }
+    .role {
+      color: var(--text-g);
+      font-size: var(--font-size-d);
+    }
     .desc {
       white-space: pre-line;
       color: var(--text-h);

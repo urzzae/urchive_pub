@@ -18,7 +18,6 @@ function Home() {
       <Header />
       <Hero />
       <div ref={ref} className={styles.wrap}>
-        <motion.div style={{ y }} className={styles.bg}></motion.div>
         <Projects />
         <Contact />
       </div>
