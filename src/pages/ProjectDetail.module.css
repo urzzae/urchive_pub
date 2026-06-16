@@ -46,6 +46,10 @@
   right: -16px;
   opacity: 0.85;
 }
+.container .info .role {
+  color: var(--text-g);
+  font-size: var(--font-size-d);
+}
 .container .info .desc {
   white-space: pre-line;
   color: var(--text-h);

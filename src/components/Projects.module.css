@@ -1,11 +1,12 @@
 section {
   position: relative;
   padding: 10rem 0;
+  overflow-x: hidden;
   background-color: var(--bg);
 }
 section .txt {
   position: absolute;
-  top: 50px;
+  top: -50dvh;
   right: -35px;
   font-size: clamp(6.25rem, 13.3333vw, 12rem);
   font-family: var(--heading);
@@ -21,92 +22,184 @@ section .inner {
   position: relative;
   z-index: 999;
 }
-section .inner .line {
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: var(--border);
-}
-section .inner .line.line1 {
-  top: 45%;
-}
-section .inner .line.line2 {
-  top: 58%;
-}
-section .inner .line.line3 {
-  top: 85%;
-}
-section .inner .line.line4 {
-  top: 105%;
-}
 section .project_list {
   position: relative;
   display: flex;
+  flex-direction: column;
   z-index: 9;
+  padding: 0 1rem;
+}
+@media (max-width: 1600px) {
+  section .project_list {
+    gap: 4rem;
+  }
 }
 section .project_item {
-  border: 1px solid var(--border);
-  height: 500px;
-  transition: margin-top 0.25s ease-in-out;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
 }
-section .project_item:hover {
-  margin-top: -15px;
+section .project_item::before {
+  position: absolute;
+  font-size: 10rem;
+  font-family: var(--heading);
+  -webkit-text-stroke: 1px var(--border);
+  color: transparent;
+  top: -3rem;
+  opacity: 0.45;
 }
-section .project_item:not(:first-child) {
-  margin-left: -1px;
+section .project_item:nth-child(1)::before {
+  content: "01";
 }
-section .project_item:nth-child(1) .title .inner {
-  top: 110px;
+section .project_item:nth-child(2)::before {
+  content: "02";
 }
-section .project_item:nth-child(2) .title .inner {
-  top: 107px;
+section .project_item:nth-child(3)::before {
+  content: "03";
 }
-section .project_item:nth-child(3) .title .inner {
-  top: 110px;
+section .project_item:nth-child(4)::before {
+  content: "04";
 }
-section .project_item:nth-child(4) .title .inner {
-  top: 100px;
+section .project_item:nth-child(odd) {
+  left: -15rem;
+}
+section .project_item:nth-child(odd)::before {
+  left: -3rem;
+}
+section .project_item:nth-child(even) {
+  right: -15rem;
+}
+section .project_item:nth-child(even)::before {
+  right: -3rem;
+}
+section .project_item:nth-child(even) a {
+  flex-direction: row-reverse;
+}
+@media (max-width: 986px) {
+  section .project_item:nth-child(even) a {
+    flex-direction: column;
+  }
+}
+section .project_item:nth-child(even) .info {
+  align-items: flex-end;
+}
+@media (max-width: 986px) {
+  section .project_item:nth-child(even) .info {
+    align-items: center;
+  }
+}
+section .project_item:nth-child(even) .info .title,
+section .project_item:nth-child(even) .info .summary {
+  text-align: right;
+}
+@media (max-width: 986px) {
+  section .project_item:nth-child(even) .info .title,
+  section .project_item:nth-child(even) .info .summary {
+    text-align: center;
+  }
+}
+section .project_item:nth-child(even) .info .summary {
+  color: var(--text-h);
+}
+@media (max-width: 1600px) {
+  section .project_item:nth-child(odd) {
+    left: -5rem;
+  }
+  section .project_item:nth-child(even) {
+    right: -5rem;
+  }
+}
+@media (max-width: 1200px) {
+  section .project_item:nth-child(odd) {
+    left: 0;
+  }
+  section .project_item:nth-child(even) {
+    right: 0;
+  }
 }
 section .project_item a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   position: relative;
+  border-radius: var(--bg);
+  top: 0;
+  transition: top 0.35s ease-in-out;
+}
+section .project_item a:hover {
+  top: -15px;
+}
+section .project_item a:hover .thumb {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+@media (max-width: 986px) {
+  section .project_item a {
+    flex-direction: column;
+  }
+}
+section .project_item .thumb {
+  width: 300px;
+  max-width: 90%;
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+  aspect-ratio: 1/0.85;
+  border-radius: 0.65rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 40px -15px, rgba(0, 0, 0, 0.15) 0px 10px 25px -20px;
+  transition: box-shadow 0.35s ease-in-out;
+  border: 1px solid var(--border-g);
+}
+section .project_item .thumb img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .project_item .info {
+  width: calc(100% - 1rem - 300px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-  height: 100%;
 }
-section .project_item a .num {
-  width: 50%;
-  text-align: center;
-  font-size: var(--font-size-s);
-  font-weight: var(--font-weight-boldEx);
-  padding-top: 3px;
-  border-bottom: 1px solid var(--border);
+@media (max-width: 986px) {
+  section .project_item .info {
+    width: 100%;
+    align-items: center;
+  }
 }
-section .project_item a .period {
-  font-size: calc(var(--font-size-s) - 1px);
-  font-weight: var(--font-weight-boldEx);
-  text-align: center;
-  white-space: break-spaces;
-  line-height: 1.2;
-  padding-bottom: 15px;
-  white-space: pre-line;
-}
-section .project_item a .title {
+section .project_item .info .title {
   width: 100%;
-  flex: 1;
-  position: relative;
+  display: block;
+  font-size: var(--font-size-m);
 }
-section .project_item a .title .inner {
-  transform: translateX(-50%) rotate(90deg);
-  transform-origin: center;
-  position: absolute;
-  left: 50%;
+@media (max-width: 986px) {
+  section .project_item .info .title {
+    text-align: center;
+  }
 }
-section .project_item a .title p {
-  line-height: 1;
-  font-size: calc(var(--font-size-s) + 1.5px);
-  font-weight: var(--font-weight-bold);
-  white-space: nowrap;
+section .project_item .info .summary {
+  white-space: break-spaces;
+  color: var(--text-h);
+  padding-top: 1rem;
+}
+@media (max-width: 986px) {
+  section .project_item .info .summary {
+    text-align: center;
+  }
+}
+@media (max-width: 540px) {
+  section .project_item .info .summary {
+    white-space: normal;
+  }
+}
+section .project_item .info .skill {
+  color: var(--text-g);
+  font-size: var(--font-size-s);
+}
+section .project_item .info .date {
+  font-size: var(--font-size-s);
+  color: var(--text-g);
 }/*# sourceMappingURL=Projects.module.css.map */

@@ -1,5 +1,6 @@
 .wrap {
   position: relative;
+  top: 100dvh;
 }
 .wrap .bg {
   position: absolute;
