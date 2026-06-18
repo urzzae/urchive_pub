@@ -19,11 +19,11 @@ export const projects: Project[] = [
   {
     id: "project-04",
     skill: "Design · Markup · jQuery · SCSS · GSAP",
-    title: "디자인210 공식 웹사이트 구축",
+    title: "디자인210 브랜드 웹사이트 마크업",
     date: "23 ~ 24",
     thumb: "thumb_4",
     summary:
-      "브랜드 아이덴티티를 반영한 공식 웹사이트의\n디자인 및 구현을 함께 진행했습니다.",
+      "브랜드 아이덴티티를 반영한 웹사이트의\n디자인 및 마크업을 함께 진행했습니다.",
   },
   {
     id: "project-02",

@@ -66,7 +66,7 @@ export const projectDetails: ProjectDetail[] = [
   {
     id: "project-04",
     num: "Work Project",
-    title: "디자인210 공식 웹사이트 구축",
+    title: "디자인210 브랜드 웹사이트 마크업",
     tags: [
       "Photoshop",
       "Illustrator",
@@ -75,16 +75,20 @@ export const projectDetails: ProjectDetail[] = [
       "SCSS",
       "GSAP",
       "jQuery",
-      "Web",
+      "Web & Mobile",
     ],
     buttons: [
       {
         label: "전체페이지 결과물",
         href: "https://portfolio-p04.vercel.app/index.html",
       },
+      {
+        label: "github",
+        href: "https://github.com/urzzae/portfolio_p04_public.git",
+      },
     ],
     contribution: "기획&디자인 기여도 : 60% / 퍼블리싱 기여도 : 100%",
     description:
-      "브랜드 아이덴티티를 반영한 공식 웹사이트의 디자인 및 구현을 함께 진행한 프로젝트입니다.\nGSAP(ScrollTrigger)를 활용해 스크롤 기반 인터랙션을 구현하고, 심플하면서도 캐주얼한 브랜드 무드를 반영했습니다.\nSCSS를 활용해 스타일을 체계적으로 구조화하여 재사용성과 유지보수성을 고려한 스타일 시스템을 구축했습니다.\n* 본 프로젝트는 내부 사정으로 인해 중단되었습니다.",
+      "브랜드 아이덴티티를 반영한 웹사이트의 디자인 및 마크업을 함께 진행한 프로젝트입니다.\nGSAP(ScrollTrigger)를 활용해 스크롤 기반 인터랙션을 구현하고, 심플하면서도 캐주얼한 브랜드 무드를 반영했습니다.\nSCSS를 활용해 스타일을 체계적으로 구조화하여 재사용성과 유지보수성을 고려한 스타일 시스템을 구축했습니다.\n* 본 프로젝트는 내부 사정으로 인해 중단되었습니다.",
   },
 ];
