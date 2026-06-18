@@ -25,7 +25,13 @@ function ProjectItem({
     >
       <Link to={`/project/${id}`}>
         <figure className={styles.thumb}>
-          <img src={`/images/${thumb}.png`} />
+          {id === "project-01" ? (
+            <img src={`/images/${thumb}.png`} />
+          ) : (
+            <video autoPlay loop muted playsInline>
+              <source src={`/videos/${thumb}.mp4`} type="video/mp4" />
+            </video>
+          )}
         </figure>
         <div className={styles.info}>
           <span className={styles.date}>{date}</span>
