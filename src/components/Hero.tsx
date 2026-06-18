@@ -74,7 +74,7 @@ function Hero() {
             >
               <span>UI Design</span>
               <span>UI Development</span>
-              <span>Web & Mobile Markup</span>
+              <span>Web & Mobile Publishing</span>
             </motion.div>
           </div>
           <motion.p
