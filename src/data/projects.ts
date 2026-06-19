@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     id: "project-04",
     skill: "jQuery · SCSS · GSAP",
-    title: "디자인210 브랜드 웹사이트 퍼블리싱",
+    title: "디자인210 브랜드 웹사이트 구축",
     date: "23 ~ 24",
     thumb: "pj04_1",
     summary:
