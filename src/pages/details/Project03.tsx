@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Project03() {
   return (
-    <div className={styles.contents}>
+    <section className={styles.contents}>
       <motion.figure
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ function Project03() {
           <p className={styles.center}>폰트 상세이미지 작업</p>
         </figcaption>
       </motion.figure>
-    </div>
+    </section>
   );
 }
 

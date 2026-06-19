@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Project04() {
   return (
-    <div className={styles.contents}>
+    <section className={styles.contents}>
       <motion.figure
         initial={{ opacity: 0, y: 35 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -181,7 +181,7 @@ function Project04() {
           </p>
         </figcaption>
       </motion.figure>
-    </div>
+    </section>
   );
 }
 
