@@ -9,8 +9,8 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "project-03",
-    skill: "UI/UX · Markup · jQuery",
-    title: "디자인210 쇼핑몰 개편 & 유지보수",
+    skill: "Cross-browsing · jQuery",
+    title: "디자인210 자사몰 개편 & 유지보수",
     date: `22.03 ~ 25.11`,
     thumb: "pj03_1",
     summary:
@@ -18,7 +18,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-04",
-    skill: "Design · Markup · jQuery · SCSS · GSAP",
+    skill: "jQuery · SCSS · GSAP",
     title: "디자인210 브랜드 웹사이트 퍼블리싱",
     date: "23 ~ 24",
     thumb: "pj04_1",
@@ -27,7 +27,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-02",
-    skill: "Design · Markup · jQuery",
+    skill: "Design · Markup",
     title: "[개인작업] 책발전소 가상 웹사이트",
     date: "21.12",
     thumb: "pj02_1v",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
   },
   {
     id: "project-01",
-    skill: "Design · Markup · jQuery",
+    skill: "Design · Markup",
     title: "[개인작업] 국립중앙도서관 리디자인",
     date: "21.12",
     thumb: "thumb_1",
