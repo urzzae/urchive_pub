@@ -4,7 +4,9 @@ section {
   position: relative;
   padding: 10rem 0;
   overflow-x: hidden;
-  background-color: var(--bg);
+  section.bg {
+    background-color: var(--bg);
+  }
   .txt {
     position: absolute;
     top: -50dvh;
@@ -122,7 +124,8 @@ section {
       &:hover {
         top: -15px;
         .thumb {
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 50px 100px -20px,
+          box-shadow:
+            rgba(0, 0, 0, 0.35) 0px 50px 100px -20px,
             rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
         }
       }
@@ -138,7 +141,8 @@ section {
       isolation: isolate;
       aspect-ratio: 1/0.85;
       border-radius: 0.65rem;
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 40px -15px,
+      box-shadow:
+        rgba(0, 0, 0, 0.2) 0px 20px 40px -15px,
         rgba(0, 0, 0, 0.15) 0px 10px 25px -20px;
       transition: box-shadow 0.35s ease-in-out;
       border: 1px solid var(--border-g);

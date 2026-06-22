@@ -12,7 +12,7 @@ function Projects() {
   const y = useTransform(scrollYProgress, [0, 0.75], ["0px", "100dvh"]);
 
   return (
-    <section ref={ref}>
+    <section className={styles.bg} ref={ref}>
       <motion.div style={{ y: y }} className={styles.txt}>
         Portfolio
       </motion.div>
