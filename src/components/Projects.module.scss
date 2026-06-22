@@ -4,7 +4,7 @@ section {
   position: relative;
   padding: 10rem 0;
   overflow-x: hidden;
-  section.bg {
+  &.bg {
     background-color: var(--bg);
   }
   .txt {
