@@ -1,3 +1,4 @@
+@use "../helpers/mediaQuery" as mq;
 // Header.module.scss
 
 .header {
@@ -11,7 +12,7 @@
   border-top: 2px solid var(--border);
   border-bottom: 4px double var(--border);
   padding: 10px 15px 13px 15px;
-  @media (max-width: 768px) {
+  @include mq.tablet {
     top: 25px;
     width: 90%;
     justify-content: center;
@@ -25,7 +26,7 @@
   .subTitle {
     font-size: var(--font-size-s);
     font-weight: var(--font-weight-bold);
-    @media (max-width: 768px) {
+    @include mq.tablet {
       display: none;
     }
   }

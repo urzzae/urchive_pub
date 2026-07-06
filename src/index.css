@@ -21,7 +21,7 @@
   --margin-def-v: 20px;
   --margin-def-h: 15px;
 
-  --container-size: 1200px;
+  --container-size: 1400px;
 
   --sans: "Pretendard Variable", Roboto, sans-serif;
   --heading: "Playfair Display", Roboto, sans-serif;
@@ -146,6 +146,7 @@ html {
 
 .container {
   width: var(--container-size);
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -162,4 +163,8 @@ html {
 .flex-center-v {
   display: flex;
   align-items: center;
+}
+/* lightbox desc 영역 여백 */
+.yarl__slide_description {
+  padding-bottom: 2rem;
 }

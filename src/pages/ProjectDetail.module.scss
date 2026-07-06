@@ -1,3 +1,4 @@
+@use "../helpers/mediaQuery" as mq;
 // ProjectDetail.module.scss
 
 .container {
@@ -5,7 +6,7 @@
   padding: 120px 15px;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 768px) {
+  @include mq.tablet {
     width: 90%;
     padding: 95px 0;
   }
@@ -52,7 +53,7 @@
       white-space: pre-line;
       color: var(--text-h);
       font-size: var(--font-size-d);
-      @media (max-width: 768px) {
+      @include mq.tablet {
         white-space: normal;
       }
     }
@@ -85,7 +86,7 @@
     figure {
       flex: 1;
     }
-    @media (max-width: 768px) {
+    @include mq.tablet {
       flex-direction: column;
       gap: 0;
     }
@@ -105,7 +106,7 @@
     figcaption {
       padding: 1rem 1rem 3rem 1rem;
       font-size: var(--font-size-d);
-      @media (max-width: 768px) {
+      @include mq.tablet {
         padding-left: 0;
         padding-right: 0;
       }

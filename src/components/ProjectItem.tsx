@@ -12,6 +12,7 @@ function ProjectItem({
   date,
   summary,
   thumb,
+  hasVideo,
 }: ProjectItemProps) {
   return (
     <motion.li
@@ -25,12 +26,18 @@ function ProjectItem({
     >
       <Link to={`/project/${id}`}>
         <figure className={styles.thumb}>
-          {id === "project-01" ? (
-            <img src={`/images/${thumb}.png`} />
-          ) : (
-            <video autoPlay loop muted playsInline>
+          {hasVideo ? (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label={`${title} 썸네일`}
+            >
               <source src={`/videos/${thumb}.mp4`} type="video/mp4" />
             </video>
+          ) : (
+            <img src={`/images/${thumb}.png`} alt={`${title} 썸네일`} />
           )}
         </figure>
         <div className={styles.info}>

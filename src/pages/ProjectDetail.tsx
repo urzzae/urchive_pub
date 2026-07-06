@@ -1,10 +1,7 @@
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Project01 from "./details/Project01";
-import Project02 from "./details/Project02";
-import Project03 from "./details/Project03";
-import Project04 from "./details/Project04";
+import ProjectDetailFigure from "../components/ProjectDetailFigure";
 import styles from "./ProjectDetail.module.scss";
 import { projectDetails } from "../data/projectDetails";
 import { IconExternalLink } from "@tabler/icons-react";
@@ -12,13 +9,6 @@ import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
-
-const projectComponents: Record<string, React.ComponentType> = {
-  "project-01": Project01,
-  "project-02": Project02,
-  "project-03": Project03,
-  "project-04": Project04,
-};
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -32,10 +22,8 @@ function ProjectDetail() {
   const nextProject = projects[currentIndex + 1];
 
   const project = projectDetails.find((item) => item.id === id);
-  const DetailComponent = id ? projectComponents[id] : null;
 
-  if (!DetailComponent || !project)
-    return <div>존재하지 않는 프로젝트입니다.</div>;
+  if (!project) return <div>존재하지 않는 프로젝트입니다.</div>;
 
   return (
     <>
@@ -72,7 +60,21 @@ function ProjectDetail() {
             </div>
           )}
         </motion.div>
-        <DetailComponent />
+
+        <section className={styles.contents} key={id}>
+          {project.content.map((block, i) =>
+            block.kind === "row" ? (
+              <div className={styles.figures} key={i}>
+                {block.figures.map((figure, j) => (
+                  <ProjectDetailFigure key={j} {...figure} />
+                ))}
+              </div>
+            ) : (
+              <ProjectDetailFigure key={i} {...block.figure} />
+            ),
+          )}
+        </section>
+
         <div className={styles.footer}>
           {prevProject && (
             <div className={styles.button_prev}>

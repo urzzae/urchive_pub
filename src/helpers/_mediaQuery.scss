@@ -1,0 +1,24 @@
+// _mediaQuery.scss
+// ** Break Point
+$lap: 1200px;
+$lapSmall: 1000px;
+$tablet: 768px;
+
+// lap (~1200)
+@mixin lap {
+  @media screen and (max-width: #{$lap}) {
+    @content;
+  }
+}
+// lapSmall (~1000)
+@mixin lapSmall {
+  @media screen and (max-width: #{$lapSmall}) {
+    @content;
+  }
+}
+// tablet (~768)
+@mixin tablet {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}

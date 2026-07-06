@@ -14,6 +14,7 @@ function ProjectList() {
           date={project.date}
           summary={project.summary}
           thumb={project.thumb}
+          hasVideo={project.hasVideo}
         />
       ))}
     </ul>
